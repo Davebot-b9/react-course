@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import './formStyles.css'
 
+/**
+ * Componente `SerieForm`.
+ * 
+ * Este componente muestra un formulario para ingresar el valor de n y calcular
+ * el término n de una serie numérica.
+ * 
+ * @param {Object} props - Propiedades del componente.
+ * @param {Function} props.onCalculate - Función de devolución de llamada para realizar el cálculo.
+ * @returns {JSX.Element} - El formulario de entrada de datos.
+ */
 function SerieForm(props) {
     const [n, setN] = useState(""); // Estado para almacenar el valor de n
 

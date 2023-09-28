@@ -1,5 +1,13 @@
 import React from "react";
-
+/**
+ * Componente `ResultadoCalculo`.
+ * 
+ * Este componente muestra el resultado del cálculo del término n de la serie numérica.
+ * 
+ * @param {Object} props - Propiedades del componente.
+ * @param {number|null} props.resultado - El resultado del cálculo del término n.
+ * @returns {JSX.Element} - La representación visual del resultado.
+ */
 function ResultadoCalculo(props) {
     return (
         <div>

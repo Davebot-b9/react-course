@@ -1,15 +1,31 @@
+/**
+ * Clase SerieNumerica.
+ * 
+ * Esta clase proporciona métodos para calcular términos de una serie numérica
+ * basada en fórmulas matemáticas.
+ */
 class SerieNumerica {
     constructor() {
         // Inicializamos algunos valores iniciales para la serie Fibonacci.
         this.fibonacci = [0, 1];
     }
 
-    // Método para calcular el número triangular
+    /**
+     * Método para calcular el número triangular.
+     * 
+     * @param {number} n - El número para el que se calcula el número triangular.
+     * @returns {number} - El número triangular correspondiente a n.
+     */
     triangular(n) {
         return (n * (n + 1)) / 2;
     }
 
-    // Método para verificar si un número es primo
+    /**
+     * Método para verificar si un número es primo.
+     * 
+     * @param {number} num - El número que se verifica como primo.
+     * @returns {boolean} - `true` si el número es primo, `false` de lo contrario.
+     */
     esPrimo(num) {
         if (num <= 1) return false;
         if (num <= 3) return true;
@@ -20,7 +36,12 @@ class SerieNumerica {
         return true;
     }
 
-    // Método para calcular el término n de la serie Fibonacci
+    /**
+     * Método para calcular el término n de la serie Fibonacci.
+     * 
+     * @param {number} n - El índice del término de la serie Fibonacci que se calcula.
+     * @returns {number} - El término n de la serie Fibonacci.
+     */
     calcularFibonacci(n) {
         if (n < this.fibonacci.length) {
             return this.fibonacci[n];
@@ -35,7 +56,12 @@ class SerieNumerica {
         return this.fibonacci[n];
     }
 
-    // Método para calcular el término n de la serie
+    /**
+     * Método para calcular el término n de la serie numérica.
+     * 
+     * @param {number} n - El término de la serie numérica que se calcula.
+     * @returns {number|string} - El término n de la serie numérica o "N/A" si n es negativo.
+     */
     serie(n) {
         if (n < 0) {
             return "N/A"; // Manejamos el caso de n negativo
@@ -59,4 +85,4 @@ for (let i = 0; i <= 10; i++) {
     console.log(`Serie(${i}) = ${serieNumerica.serie(i)}`);
 }
 
-export default SerieNumerica
+export default SerieNumerica;
