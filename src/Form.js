@@ -12,11 +12,10 @@ import './formStyles.css'
  * @returns {JSX.Element} - El formulario de entrada de datos.
  */
 function SerieForm(props) {
-    const [n, setN] = useState(""); // Estado para almacenar el valor de n
+    const [n, setN] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Llama a la función de cálculo con el valor de n ingresado
         props.onCalculate(Number(n));
     };
 

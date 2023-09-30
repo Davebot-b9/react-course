@@ -13,14 +13,13 @@ import SerieNumerica from "./SerieNumerica";
  * @returns {null} - Este componente no tiene representación visual.
  */
 function SerieCalculadora(props) {
-    // Se utiliza useEffect para realizar el cálculo cuando props.n cambia
     React.useEffect(() => {
         const serieNumerica = new SerieNumerica();
         const resultado = serieNumerica.serie(props.n);
         props.onResultadoCalculado(resultado);
     }, [props, props.n]);
 
-    return null; // El componente no necesita representación visual
+    return null;
 }
 
 export default SerieCalculadora;

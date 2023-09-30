@@ -6,7 +6,6 @@
  */
 class SerieNumerica {
     constructor() {
-        // Inicializamos algunos valores iniciales para la serie Fibonacci.
         this.fibonacci = [0, 1];
     }
 
@@ -64,22 +63,20 @@ class SerieNumerica {
      */
     serie(n) {
         if (n < 0) {
-            return "N/A"; // Manejamos el caso de n negativo
+            return "N/A";
         }
 
-        // Calculamos los valores necesarios para la fórmula
         const termTriangular = this.triangular(n + 2);
         const termPrimo = this.esPrimo(n - 1) ? 3 * (n - 1) : 0;
         const termFibonacci = this.calcularFibonacci(n);
 
-        // Calculamos el término de la serie
+
         const resultado = 2 * termTriangular - termPrimo - 7 * termFibonacci;
 
         return resultado;
     }
 }
 
-// Pruebas unitarias
 const serieNumerica = new SerieNumerica();
 for (let i = 0; i <= 10; i++) {
     console.log(`Serie(${i}) = ${serieNumerica.serie(i)}`);
