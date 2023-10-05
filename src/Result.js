@@ -8,7 +8,7 @@ import React from "react";
  * @param {number|null} props.resultado - El resultado del cálculo del término n.
  * @returns {JSX.Element} - La representación visual del resultado.
  */
-function ResultadoCalculo(props) {
+export default function ResultadoCalculo(props) {
     return (
         <div>
             <h2 className="titleResult">Resultado del Cálculo</h2>
@@ -16,5 +16,3 @@ function ResultadoCalculo(props) {
         </div>
     );
 }
-
-export default ResultadoCalculo;

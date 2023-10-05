@@ -11,7 +11,7 @@ import './formStyles.css'
  * 
  * @returns {JSX.Element} - La interfaz de usuario de la aplicación.
  */
-function App() {
+export default function App() {
     const [resultado, setResultado] = useState(null);
 
     /**
@@ -33,5 +33,3 @@ function App() {
         </div>
     );
 }
-
-export default App;

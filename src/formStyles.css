@@ -23,7 +23,7 @@
     display: inline-block;
 }
 
-.butonCalculate {
+.buttonCalculate {
     background-color: burlywood;
     border: none;
     border-radius: 15px;
@@ -33,7 +33,7 @@
     font-size: 16px;
 }
 
-.butonCalculate:hover {
+.buttonCalculate:hover {
     color: coral;
 }
 

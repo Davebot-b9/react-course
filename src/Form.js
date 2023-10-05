@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './formStyles.css'
-
 /**
  * Componente `SerieForm`.
  * 
@@ -11,7 +10,7 @@ import './formStyles.css'
  * @param {Function} props.onCalculate - Función de devolución de llamada para realizar el cálculo.
  * @returns {JSX.Element} - El formulario de entrada de datos.
  */
-function SerieForm(props) {
+export default function SerieForm(props) {
     const [n, setN] = useState("");
 
     const handleSubmit = (e) => {
@@ -31,10 +30,8 @@ function SerieForm(props) {
                         className="inputN"
                     />
                 </label>
-                <button type="submit" className="butonCalculate">Calcular</button>
+                <button type="submit" className="buttonCalculate">Calcular</button>
             </form>
         </div>
     );
 }
-
-export default SerieForm;

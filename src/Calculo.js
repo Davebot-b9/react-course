@@ -12,7 +12,7 @@ import SerieNumerica from "./SerieNumerica";
  * @param {Function} props.onResultadoCalculado - Función de devolución de llamada para recibir el resultado.
  * @returns {null} - Este componente no tiene representación visual.
  */
-function SerieCalculadora(props) {
+export default function SerieCalculadora(props) {
     React.useEffect(() => {
         const serieNumerica = new SerieNumerica();
         const resultado = serieNumerica.serie(props.n);
@@ -21,5 +21,3 @@ function SerieCalculadora(props) {
 
     return null;
 }
-
-export default SerieCalculadora;

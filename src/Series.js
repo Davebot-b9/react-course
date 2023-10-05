@@ -4,7 +4,7 @@
  * Esta clase proporciona métodos para calcular términos de una serie numérica
  * basada en fórmulas matemáticas.
  */
-class SerieNumerica {
+export default class SerieNumerica {
     constructor() {
         this.fibonacci = [0, 1];
     }
@@ -81,9 +81,7 @@ class SerieNumerica {
     }
 }
 
-const serieNumerica = new SerieNumerica();
+const serieNum = new SerieNumerica();
 for (let i = 0; i <= 10; i++) {
-    console.log(`Serie(${i}) = ${serieNumerica.serie(i)}`);
+    console.log(`Serie(${i}) = ${serieNum.serie(i)}`);
 }
-
-export default SerieNumerica;
