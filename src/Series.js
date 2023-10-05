@@ -20,20 +20,24 @@ class SerieNumerica {
     }
 
     /**
-     * Método para verificar si un número es primo.
-     * 
-     * @param {number} num - El número que se verifica como primo.
-     * @returns {boolean} - `true` si el número es primo, `false` de lo contrario.
-     */
+ * Método para verificar si un número es primo.
+ * 
+ * @param {number} num - El número que se verifica como primo.
+ * @returns {boolean} - `true` si el número es primo, `false` de lo contrario.
+ */
     esPrimo(num) {
         if (num <= 1) return false;
         if (num <= 3) return true;
+
         if (num % 2 === 0 || num % 3 === 0) return false;
+
         for (let i = 5; i * i <= num; i += 6) {
             if (num % i === 0 || num % (i + 2) === 0) return false;
         }
+
         return true;
     }
+
 
     /**
      * Método para calcular el término n de la serie Fibonacci.
@@ -67,7 +71,7 @@ class SerieNumerica {
         }
 
         const termTriangular = this.triangular(n + 2);
-        const termPrimo = this.esPrimo(n - 1) ? 3 * (n - 1) : 0;
+        const termPrimo = this.esPrimo(n - 1) * 3 * (n - 1);
         const termFibonacci = this.calcularFibonacci(n);
 
 
